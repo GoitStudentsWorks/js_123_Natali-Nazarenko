@@ -1,1 +1,41 @@
 /*header*/
+
+.header {
+  width: 1312px;
+  height: 72px;
+  margin-top: 10.5px;
+  margin-bottom: 10.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 32px;
+  transition: all 500ms ease-in;
+  visibility: hidden;
+  @media only screen and (min-width: 768px) {
+    visibility: visible;
+  }
+}
+.nav-item-link {
+  text-decoration: none;
+  text-decoration-skip-ink: none;
+  transition: all 250ms ease-in-out;
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.2;
+  }
+}
