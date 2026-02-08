@@ -1,11 +1,12 @@
 .feedback-section {
   padding: 64px 0;
   margin: 0 auto;
+  max-width: 320px;
 }
 
 .feedback-swiper {
   width: 100%;
-  max-width: 375px;
+  max-width: 288px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -94,10 +95,10 @@
   mask-size: contain;
 }
 
-/* --- ПЛАНШЕТ (768px+) --- */
+/* --- ПЛАНШЕТ (768px) --- */
 @media (min-width: 768px) {
   .feedback-section {
-    max-width: 768px;
+    max-width: 704px;
     overflow: visible;
   }
 
@@ -151,7 +152,7 @@
   }
 }
 
-/* --- ДЕСКТОП (1440px+) --- */
+/* --- ДЕСКТОП (1440px) --- */
 @media (min-width: 1440px) {
   .feedback-section {
     padding: 112px 0;
@@ -159,7 +160,7 @@
   }
 
   .feedback-swiper {
-    max-width: 1216px;
+    max-width: 1312px;
   }
 
   .feedback-card {
