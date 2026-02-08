@@ -1,1 +1,174 @@
-/*feedback*/
+.feedback-section {
+  padding: 64px 0;
+  margin: 0 auto;
+  max-width: 320px;
+}
+
+.feedback-swiper {
+  width: 100%;
+  max-width: 288px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.feedback-card {
+  width: 288px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.star-rating {
+  display: inline-flex;
+  gap: 4px;
+  margin-bottom: 32px;
+}
+
+.feedback-text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.feedback-author {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.swiper-pagination {
+  position: static !important;
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+}
+
+.custom-bullet {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.custom-bullet-active {
+  background-color: #ffffff;
+  transform: scale(1.2);
+}
+
+.feedback-arrow {
+  display: none !important;
+}
+
+.star-rating__star {
+  display: inline-block;
+  width: 20px;
+  height: 19px;
+  background-color: #ffffff;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9"/></svg>')
+    no-repeat center;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9"/></svg>')
+    no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+/* --- ПЛАНШЕТ (768px) --- */
+@media (min-width: 768px) {
+  .feedback-section {
+    max-width: 704px;
+    overflow: visible;
+  }
+
+  .feedback-swiper {
+    max-width: 704px;
+    overflow: visible;
+  }
+
+  .feedback-card {
+    width: 518px;
+  }
+
+  .feedback-text {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+
+  .feedback-arrow {
+    display: flex !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px !important;
+    height: 48px !important;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swiper-button-prev.feedback-arrow {
+    left: 0;
+  }
+  .swiper-button-next.feedback-arrow {
+    right: 0;
+  }
+
+  .feedback-arrow:hover {
+    border-color: #ffffff;
+  }
+
+  .feedback-arrow::after {
+    display: none;
+  }
+
+  .icon-review {
+    width: 32px;
+    height: 32px;
+    fill: #ffffff;
+  }
+}
+
+/* --- ДЕСКТОП (1440px) --- */
+@media (min-width: 1440px) {
+  .feedback-section {
+    padding: 112px 0;
+    max-width: 1312px;
+  }
+
+  .feedback-swiper {
+    max-width: 1312px;
+  }
+
+  .feedback-card {
+    width: 866px;
+  }
+
+  .feedback-text {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+}
