@@ -1,1 +1,25 @@
-<div>Mobile menu</div>
+<div data-menu class="mobile-menu visually-hidden">
+  <div class="mobile-menu-header container">
+    <div class="header-logo">
+      <svg class="header-logo-icon chosen" width="106" height="30">
+        <use href="./img/sprite-white.svg#logo-text"></use>
+      </svg>
+    </div>
+    <button data-menu-close class="mobile-menu-close-btn" type="button">
+      <svg class="mobile-menu-close-btn-icon chosen" width="24" height="24">
+        <use href="./img/sprite-white.svg#close"></use>
+      </svg>
+    </button>
+  </div>
+  <ul class="mobile-nav container">
+    <li data-mob-nav class="mobile-nav-item chosen">
+      <a class="mobile-nav-item-link" href="#artists">Artist</a>
+    </li>
+    <li data-mob-nav class="mobile-nav-item chosen">
+      <a class="mobile-nav-item-link" href="#about-us">About Us</a>
+    </li>
+    <li data-mob-nav class="mobile-nav-item chosen">
+      <a class="mobile-nav-item-link" href="#reviews">Reviews</a>
+    </li>
+  </ul>
+</div>
