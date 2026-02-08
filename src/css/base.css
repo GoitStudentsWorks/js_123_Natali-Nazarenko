@@ -3,7 +3,7 @@
 
   font-family: 'Epilogue', 'IBM Plex Sans', 'Roboto', sans-serif;
   color: #ffffff;
-  background-color: #000000;
+  background-color: #060307;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -37,8 +37,4 @@ main {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-section {
-  padding: 112px 0;
 }
