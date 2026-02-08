@@ -1,3 +1,17 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .feedback-section {
   padding: 64px 0;
   margin: 0 auto;
@@ -99,12 +113,11 @@
 @media (min-width: 768px) {
   .feedback-section {
     max-width: 704px;
-    overflow: visible;
   }
 
   .feedback-swiper {
     max-width: 704px;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .feedback-card {
