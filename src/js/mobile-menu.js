@@ -3,21 +3,17 @@ const openBtn = document.querySelector('[data-menu-open]');
 const closeBtn = document.querySelector('[data-menu-close]');
 const mobMenuLink = document.querySelectorAll('[data-mob-nav]');
 
-const toggleMenu = () => {
-  menu.classList.toggle('visually-hidden');
-};
-
 const openMenu = () => {
-  toggleMenu();
+  menu.classList.remove('is-hidden');
   document.body.classList.add('no-scroll');
 };
 
 const closeMenu = () => {
-  toggleMenu();
+  menu.classList.add('is-hidden');
   document.body.classList.remove('no-scroll');
 };
 
-openBtn.addEventListener('click', toggleMenu);
+openBtn.addEventListener('click', openMenu);
 closeBtn.addEventListener('click', closeMenu);
 
 mobMenuLink.forEach(link => {
@@ -27,7 +23,7 @@ mobMenuLink.forEach(link => {
 });
 
 document.addEventListener('keydown', esc => {
-  if (esc.key === 'Escape' && !menu.classList.contains('visually-hidden')) {
+  if (esc.key === 'Escape' && !menu.classList.contains('is-hidden')) {
     closeMenu();
   }
 });
