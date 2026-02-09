@@ -1,7 +1,7 @@
 /*header*/
 
 .header {
-  width: 288px;
+  width: 100%;
   height: 64px;
   display: flex;
   align-items: center;
@@ -15,6 +15,7 @@
   background-color: #060307;
   @media only screen and (min-width: 768px) {
     width: 640px;
+    height: 72px;
   }
   @media only screen and (min-width: 1440px) {
     width: 1312px;
@@ -69,5 +70,16 @@
   }
   &:active {
     opacity: 0.2;
+  }
+}
+
+/* scrollbehavior for header */
+:target {
+  scroll-margin-top: 64px;
+}
+
+@media only screen and (min-width: 768px) {
+  :target {
+    scroll-margin-top: 72px;
   }
 }
