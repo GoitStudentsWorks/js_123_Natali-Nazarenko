@@ -13,7 +13,6 @@
 }
 
 .feedback-section {
-  padding: 64px 0;
   margin: 0 auto;
 }
 
@@ -168,7 +167,6 @@
 /* --- ДЕСКТОП (1440px) --- */
 @media (min-width: 1440px) {
   .feedback-section {
-    padding: 112px 0;
     max-width: 1312px;
   }
 
