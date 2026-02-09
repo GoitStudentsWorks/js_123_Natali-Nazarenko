@@ -1,17 +1,8 @@
 /*modal*/
 body.modal-open {
-  /* overflow: hidden ; */
+  overflow: hidden ;
 }
-section.modal {
-  /* width: 100%;
-  min-width: 100%;
-  padding: 0;
-  display: none; */
-  /* background: #222222; */
-  /* &.is-open {
-    display: block;
-  } */
-}
+
 section.modal {
   display: none;
   position: fixed;
@@ -20,7 +11,7 @@ section.modal {
   top: 0;
   left: 0;
   z-index: 99;
-  background-color: #222222;
+  background-color: rgba(34, 34, 34, .9);
   &.is-open {
     display: block;
   }
@@ -33,10 +24,9 @@ section.modal {
   border-radius: 16px;
   padding: 52px 0px;
   width: 288px;
-  /* height: 4478px; */
-  max-height: 80vh;
+  /* max-height: 80vh; */
   /* max-height: calc(100vh - 128px); */
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 .modal-btn {
@@ -46,8 +36,8 @@ section.modal {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* stroke: #111; */
   cursor: pointer;
+  /* stroke: #111; */
   /* transition: stroke 0.3s ease; */
 }
 .modal-title {
@@ -83,11 +73,6 @@ section.modal {
     min-width: 272px;
     width: 100%;
     height: auto;
-    transform: scale(1);
-    transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
-  &:hover {
-    transform: scale(1.1);
   }
 }
 .artist-info-list {
@@ -152,10 +137,6 @@ section.modal {
     tr:nth-child(odd) {
       background: rgba(255, 255, 255, 0.05);
     }
-    tr:hover {
-      background-color: rgba(255, 255, 255, 0.08);
-      cursor: pointer;
-    }
     th {
       padding: 4px 0px 4px 12px;
       font-size: 8px;
@@ -172,6 +153,34 @@ section.modal {
     td:last-child {
       border-radius: 0 8px 8px 0 ;
     }
+    .artist-song-link {
+      display: block;
+      width: 24px;
+      height: 24px;
+      box-sizing: border-box;
+    }
+  }
+}
 
+.artist-info-item {
+  position: relative;
+  height: 100%;
+  /* max-height: 270px; */
+  overflow: hidden;
+  transition: all .2s ease-out;
+}
+
+.see-more,
+.see-less {
+  position: absolute;
+  width: 120px;
+  text-align: right;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(6, 3, 7, 0.62) 0%, rgba(6, 3, 7, 0.9) 20%, rgba(6, 3, 7, 1) 100%);  
+  span {
+    margin-left: 6px;
+    font-size: 16px;
+    font-weight: 400;
   }
 }
