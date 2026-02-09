@@ -1,1 +1,187 @@
-/*hero*/
+.hero-section{
+    background:
+    linear-gradient(
+      to top,
+      #060307 0%,
+      rgba(35, 19, 43, 0) 80px
+    ),
+        url("../img/hero/gallery-mobile-min.jpg"),
+
+    linear-gradient(
+      to bottom,
+      #060307 0%,
+      rgba(35, 19, 43, 0) 106px
+    ),
+    
+    #23132b;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.container-hero{
+    min-height: 1031px;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.hero-info{
+    display: flex;
+    flex-direction: column;
+    padding-top: 64px;
+}
+
+.hero-title {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.hero-link {
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+
+    min-width: 288px;
+    height: 47px;
+    margin: 24px auto 64px;
+    padding: 10px 24px;
+
+    border-radius: 12px;
+    box-shadow: 0 1px 2px 0 rgba(6, 3, 7, 0.05), inset 0 -2px 1px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(6, 3, 7, 0.15), inset 0 2px 1px 0 rgba(255, 255, 255, 0.25), inset 0 32px 24px 0 rgba(255, 255, 255, 0.05);
+background: #764191;
+}
+
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-section {
+background:
+    linear-gradient(
+      to top,
+      #060307 0%,
+      rgba(35, 19, 43, 0) 80px
+    ),
+        url("../img/hero/gallery-desktop@2x-min.jpg"),
+
+    linear-gradient(
+      to bottom,
+      #060307 0%,
+      rgba(35, 19, 43, 0) 137px
+    ),
+    
+    #23132b;
+    background-repeat: no-repeat;
+    background-position: right;    
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .hero-section {
+background:
+    linear-gradient(
+      to top,
+      #060307 0%,
+      rgba(35, 19, 43, 0) 125px
+    ),
+        url("../img/hero/gallery-tablet-min.jpg"),
+
+    linear-gradient(
+      to bottom,
+      #060307 0%,
+      rgba(35, 19, 43, 0) 137px
+    ),
+    
+    #23132b;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    }
+
+    .container-hero{
+        min-height: 995px;
+        padding: 0 32px;
+    }
+
+    .hero-info{
+        width: 624px;
+        padding-top: 32px;
+        padding-right: 80px;
+    }
+
+    .hero-text{
+        font-size: 20px;
+    }
+
+    .hero-link{
+        min-width: 246px;
+        margin: 32px 458px 32px 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .hero-section {
+background:
+    linear-gradient(
+      to top,
+      #060307 0%,
+      rgba(35, 19, 43, 0) 80px
+    ),
+
+    linear-gradient(
+      to bottom,
+      #060307 0%,
+      rgba(35, 19, 43, 0) 137px
+    ),
+    
+    #23132b;
+    }
+
+    .container-hero {
+        display: flex;
+        align-items: center;
+
+        background:
+    linear-gradient(
+      to top,
+      #060307 0%,
+      rgba(35, 19, 43, 0) 80px
+    ),
+
+    linear-gradient(
+      to bottom,
+      #060307 0%,
+      rgba(35, 19, 43, 0) 137px
+    ),
+
+    url("../img/hero/gallery-desktop-min.jpg"),
+
+    #23132b;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+    .hero-info{
+        width: 640px;
+        padding-right: 31px;
+    }
+
+    .hero-title{
+        font-size: 84px;
+    }
+}
