@@ -13,9 +13,7 @@
 }
 
 .feedback-section {
-  padding: 64px 0;
   margin: 0 auto;
-  max-width: 320px;
 }
 
 .feedback-swiper {
@@ -85,6 +83,7 @@
   transition:
     background-color 0.3s ease,
     transform 0.2s ease;
+  cursor: pointer;
 }
 
 .custom-bullet-active {
@@ -112,7 +111,7 @@
 /* --- ПЛАНШЕТ (768px) --- */
 @media (min-width: 768px) {
   .feedback-section {
-    max-width: 704px;
+    max-width: 768px;
   }
 
   .feedback-swiper {
@@ -168,8 +167,7 @@
 /* --- ДЕСКТОП (1440px) --- */
 @media (min-width: 1440px) {
   .feedback-section {
-    padding: 112px 0;
-    max-width: 1312px;
+    max-width: 1440px;
   }
 
   .feedback-swiper {

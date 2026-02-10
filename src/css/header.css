@@ -1,20 +1,37 @@
 /*header*/
-
 .header {
-  width: 288px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+
+  background-color: rgba(6, 3, 7, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    background-color 250ms ease,
+    backdrop-filter 250ms ease;
+}
+
+.header-container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 16px;
   height: 64px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  position: sticky;
-  top: 0;
-  background-color: #060307;
+
+  max-width: 100%;
   @media only screen and (min-width: 768px) {
     width: 640px;
+    height: 72px;
   }
   @media only screen and (min-width: 1440px) {
     width: 1312px;

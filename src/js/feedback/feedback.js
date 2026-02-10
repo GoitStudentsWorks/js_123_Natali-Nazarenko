@@ -1,5 +1,5 @@
 import { startSwiper } from './library-feedback';
-import { fetchFeedbacks } from './feedback-api';
+import { fetchFeedbacks } from '../sound-wave-api';
 
 const listElem = document.querySelector('#feedback-list');
 
