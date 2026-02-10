@@ -3,13 +3,17 @@
 
   font-family: 'Epilogue', 'IBM Plex Sans', 'Roboto', sans-serif;
   color: #ffffff;
-  background-color: #000000;
+  background-color: #060307;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,11 +24,9 @@ body {
   margin: 0;
 }
 
-
 main {
   flex-grow: 1;
 }
-
 
 .visually-hidden {
   position: absolute;
@@ -37,8 +39,5 @@ main {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-section {
-  padding: 112px 0;
+  pointer-events: none;
 }

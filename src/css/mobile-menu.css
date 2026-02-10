@@ -1,1 +1,45 @@
 /*mobile-menu*/
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(6, 3, 7, 1);
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 250ms ease-in-out;
+}
+.mobile-menu-header {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 32px;
+  margin-top: 39px;
+}
+.mobile-menu-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
