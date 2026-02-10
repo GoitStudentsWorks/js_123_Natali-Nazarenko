@@ -1,4 +1,4 @@
-import { getArtists } from "./api-artists";
+import { getArtists } from "../sound-wave-api";
 import { renderArtistsGallery } from "./render-artists";
 import { validInput, infoMessage } from "../error-handler"
 import { showLoader, hideLoader, showLoadMoreButton, hideLoadMoreButton } from "../ui-helpers"
@@ -7,13 +7,12 @@ let page = 1;
 const perPage = 8;
 
 try {
+    showLoader();
     const data = await getArtists(page);
     console.log(data);
-    
-    showLoader();
 
     if (data.artists.length === 0) {
-        validInput({title: 'Помилка', message: 'Не вдалося завантажити дані'})
+        validInput({ title: 'Помилка', message: 'Не вдалося завантажити дані' });
     }
 
     renderArtistsGallery(data.artists);
@@ -27,7 +26,7 @@ try {
 
 const fetchCardsBtn = document.querySelector('.btn-load-more');
 fetchCardsBtn.addEventListener('click', handleClick);
-async function handleClick(event) {
+async function handleClick() {
     hideLoadMoreButton();
     showLoader();
     page += 1;
