@@ -1,6 +1,6 @@
 // import { getArtistInfo, getArtistAlbums } from '../sound-wave-api';
 import { getArtistInfo, getArtistAlbums } from './modal-api';
-import { openArtistModal, showArtistModalLoader } from './modal';
+import { openArtistModal, showArtistModalLoader } from './modal-1';
 import { validInput } from '../error-handler';
 
 const gallery = document.querySelector('.art-gallery');

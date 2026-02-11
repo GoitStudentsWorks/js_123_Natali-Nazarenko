@@ -1,8 +1,16 @@
-import { formatDuration } from './modal-learn-more';
+// const modalRoot = document.querySelector('[data-modal-wrapper]');
+import { formatDuration } from './modal-learn-more-1';
 
 export function createArtistModalMarkup(artist, albums = []) {
+  // if (!Array.isArray(albums)) {
+  //   console.error('Albums is not array:', albums);
+  //   albums = [];
+  // };
+
+  // console.log(albums);
   
   const { genres = [] } = artist;
+
 
   return `
   <div class="modal-close-btn" data-close-btn>

@@ -26,7 +26,7 @@ section.modal {
   padding: 52px 0px;
   max-width: 288px;
   width: 100%;
-  max-height: 80vh;
+  max-height: 90vh;
   overflow-y: auto; 
   scrollbar-width: thin;
   scrollbar-color: #060307 rgba(0, 0, 0, .1);
@@ -98,6 +98,10 @@ section.modal {
     height: auto;
   }
 }
+.artist-info {
+  height: auto;
+}
+
 .artist-info-list {
   display: flex;
   flex-direction: column;
@@ -124,6 +128,15 @@ section.modal {
       border: 1px solid rgba(255, 255, 255, 0.2);
       padding: 4px 10px;
     }
+  }
+  &[data-artist-bio] {
+    height: auto;
+    .artist-info-descr {
+    height: auto;
+    max-height: 324px;
+    scrollbar-width: thin;
+    scrollbar-color: #060307 rgba(0, 0, 0, .1);
+    }  
   }
 }
 .artist-album-section {
@@ -250,6 +263,7 @@ section.modal {
     }
     .artist-info-item[data-artist-bio] {
       width: 100%;
+      max-height: 135px;
     }
   }
   .artist-album-section {
@@ -295,8 +309,19 @@ section.modal {
       min-width: 100%;
     }
   }
+  
+ /* .artist-info-item {
+   &[data-artist-bio] {
+     height: auto;
+     max-height: 200px;
+   }
+ } */
+
   .artist-info-list {
     gap: 24px;
+    .artist-info-item[data-artist-bio] {
+      max-height: 190px;
+    }
   }
   .artist-album-section {
     .artist-album-item {

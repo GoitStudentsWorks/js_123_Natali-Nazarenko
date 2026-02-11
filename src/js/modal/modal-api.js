@@ -2,11 +2,9 @@ import axios from 'axios';
 
 const BASE_URL = 'https://sound-wave.b.goit.study/api';
 
-export async function fetchArtistById(id) {
+export async function getArtistInfo(id) {
   try {
     const { data } = await axios.get(`${BASE_URL}/artists/${id}`);
-    console.log('data artist');
-    console.log(data);
     return data;
 
   } catch (error) {
@@ -14,15 +12,12 @@ export async function fetchArtistById(id) {
    }
 }
 
-export async function fetchArtistAlbums(id) {
+export async function getArtistAlbums(id) {
   try {
     const { data } = await axios
       .get(`${BASE_URL}/artists/${id}/albums`);
-      console.log('album data ');  
-      console.log(data.albums);
-    return data.albums || [];
+    return data.albumsList || [];
   } catch (error) { 
     console.log(error);    
   }
-  // return data.data;
 }
