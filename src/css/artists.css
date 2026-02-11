@@ -1,7 +1,6 @@
-.artists-section {
-  padding: 64px 16px;
-  max-width: 288px;
-  margin: 0 auto;
+.artists-section{
+    max-width: 288px;
+    margin: 0 auto;
 }
 
 .section-artists-title {
@@ -128,10 +127,9 @@
 }
 
 @media screen and (min-width: 768px) {
-  .artists-section {
-    padding: 64px 32px;
-    max-width: 768px;
-  }
+    .artists-section {
+        max-width: 768px;
+    }
 
   .art-gallery {
     gap: 32px;
@@ -155,39 +153,37 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .artists-section {
-    padding: 112px 0;
-    max-width: 1440px;
-  }
+    .artists-section {
+        max-width: 1440px;
+    }
+    .artists-subtitle {
+        font-size: 60px;
+        max-width: 523px;
+        margin-bottom: 80px;
+    }
 
-  .artists-subtitle {
-    font-size: 60px;
-    max-width: 523px;
-    margin-bottom: 80px;
-  }
+    .art-gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 32px;
+        column-gap: 32px;
+    }
 
-  .art-gallery {
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 32px;
-    column-gap: 32px;
-  }
+    .art-photo {
+        max-height: 393px;
+    }
 
-  .art-photo {
-    max-height: 393px;
-  }
+    .artist-card {
+        flex-basis: calc((100% - 32px) / 2);
+    }
 
-  .artist-card {
-    flex-basis: calc((100% - 32px) / 2);
-  }
-
-  .btn-load-more {
-    width: 170px;
-    height: 47px;
-  }
-
+    .btn-load-more {
+        width: 170px;
+        height: 47px;
+    }
+    
 }
 
-.artists-section .loader {
-  margin: 0 auto;
+.artists-section .loader{
+    margin: 0 auto;
 }
