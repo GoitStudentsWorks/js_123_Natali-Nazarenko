@@ -4,15 +4,13 @@ import iziToast from "izitoast";
 const errorText = {
     endLoad: {
         title: '!',
-        message: `We're sorry, but you've reached the end of search results.` //коли закінчилися artists
+        message: `We're sorry, but you've reached the end of search results.`
     },
     network: {
         title: 'WARNING!',
-        message: ''             //повідомлення від сервера
+        message: ''
     }
 }
-
-//сповіщення красне для повідомлень від сервера
 
 export function validInput({ title, message}) {
         iziToast.show({
@@ -20,12 +18,10 @@ export function validInput({ title, message}) {
             titleColor: 'red',
             message,
             position: 'topCenter',
-            messageColor: 'black',
+            messageColor: 'red',
             color: 'red',
     });
 }
-
-//сповіщення сині для повідомлень про кінеці галереї
 
 export function infoMessage({ title, message }) {
     iziToast.show({
@@ -37,11 +33,3 @@ export function infoMessage({ title, message }) {
             color: 'blue',
     });
 }
-
-// приклад обробки помилки
-//      }catch (error) {
-//        errorText.network.message = error.message;
-//        validInput(errorText.network);
-//      }finally {
-//        hideLoader(); 
-//      }
