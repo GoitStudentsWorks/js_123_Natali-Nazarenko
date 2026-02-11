@@ -30,13 +30,13 @@ export function openArtistModal(artist, albums) {
   window.addEventListener('keydown', onEsc);
 }
 
-// export function showArtistModalLoader() {
-//   modalRoot.innerHTML = `
-//     <div class="modal-backdrop">
-//       <div class="modal">
-//         <p class="loader"></p>
-//       </div>
-//     </div>
-//   `;
-//   // document.body.classList.add('modal-open');
-// }
+export function showArtistModalLoader() {
+  modalRoot.innerHTML = `
+    <div class="modal-backdrop">
+      <div class="modal">
+        <p class="loader"></p>
+      </div>
+    </div>
+  `;
+  // document.body.classList.add('modal-open');
+}

@@ -1,10 +1,8 @@
-// import { getArtistInfo, getArtistAlbums } from '../sound-wave-api';
 import { getArtistInfo, getArtistAlbums } from './modal-api';
 import { openArtistModal, showArtistModalLoader } from './modal';
 import { validInput } from '../error-handler';
 
 const gallery = document.querySelector('.art-gallery');
-
 
 
 gallery.addEventListener('click', onLearnMoreClick);
@@ -13,18 +11,16 @@ async function onLearnMoreClick(event) {
   const btn = event.target.closest('.learn-more-btn');
   if (!btn) return;
   
-  
   const artistId = btn.dataset.artistId;
-  // console.log(artistId);
-
+  
   try {
     showArtistModalLoader();
-
+    
     const [artist, albums] = await Promise.all([
       getArtistInfo(artistId),
       getArtistAlbums(artistId),
     ]);
-
+    
     openArtistModal(artist, albums);
   } catch (error) {
     // console.warn(error);
@@ -34,7 +30,6 @@ async function onLearnMoreClick(event) {
     });
   }
 }
-
 
 export function formatDuration(ms) {
   if (!ms || isNaN(ms)) return '-';
