@@ -1,5 +1,3 @@
-import './js/render-functions/render-modal';
-
 import './js/artists/main-artists';
 import './js/feedback/feedback';
 import './js/mobile-menu';
