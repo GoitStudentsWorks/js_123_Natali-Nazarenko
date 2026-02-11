@@ -13,7 +13,7 @@ export function renderArtistsGallery(data) {
             <p class='artist-bio'>${strBiographyEN}</p>
             <button class='learn-more-btn' type="button" data-artist-id="${_id}"><span class='btn-text'>Learn More</span>
             <svg class="right-triangle" width="24" height="24">
-            <use href="../img/sprite-white.svg#right-triangle-full"></use>
+            <use href="/img/sprite-white.svg#right-triangle-full"></use>
             </svg>
             </button>
         </li>
