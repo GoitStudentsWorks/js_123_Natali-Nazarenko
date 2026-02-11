@@ -19,7 +19,7 @@ export async function getArtistInfo(id) {
 
 export async function getArtistAlbums(id) {
   const { data } = await axios.get(`${BASE_URL}/artists/${id}/albums`);
-  return data;
+  return data.albumList || [];
 }
 
 export async function fetchFeedbacks() {
