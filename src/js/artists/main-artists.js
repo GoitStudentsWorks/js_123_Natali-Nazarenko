@@ -6,26 +6,31 @@ import { showLoader, hideLoader, showLoadMoreButton, hideLoadMoreButton } from "
 let page = 1;
 const perPage = 8;
 
-try {
-    showLoader();
-    const data = await getArtists(page);
-    console.log(data);
+async function initArtists() {
+    try {
+        showLoader();
+        const data = await getArtists(page);
+        console.log(data);
 
-    if (data.artists.length === 0) {
+        if (data.artists.length === 0) {
+            validInput({ title: 'Помилка', message: 'Не вдалося завантажити дані' });
+        }
+
+        renderArtistsGallery(data.artists);
+        showLoadMoreButton();
+
+    } catch (error) {
         validInput({ title: 'Помилка', message: 'Не вдалося завантажити дані' });
+    } finally {
+        hideLoader();
     }
-
-    renderArtistsGallery(data.artists);
-    showLoadMoreButton();
-
-} catch(error) {
-    validInput({ title: 'Помилка', message: 'Не вдалося завантажити дані'});
-} finally {
-    hideLoader();
 }
+
+initArtists();
 
 const fetchCardsBtn = document.querySelector('.btn-load-more');
 fetchCardsBtn.addEventListener('click', handleClick);
+
 async function handleClick() {
     hideLoadMoreButton();
     showLoader();
